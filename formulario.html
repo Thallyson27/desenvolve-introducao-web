@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Pesquisa</title>
+</head>
+
+<body>
+
+    <head>
+        <h1 style="font-size: 70px; text-align: center;">Formulário de satisfação</h1>
+    </head>
+    <main style="display: flex; justify-content: center;">
+        <form>
+            <div style="display: flex; justify-content: space-between; flex-direction: column;">
+                <h3 style="font-size: 30px; text-align: center;">Dados pessoais</h3>
+                <p  style="text-align: center;">
+                    <label form="nome">Nome completo</label>
+                    <input type="text" id="nome" />
+                </p>
+                <p style="text-align: center;">
+                    <label form="mail">Email</label>
+                    <input type="email" id="mail" style="width: 226px;" />
+                </p>
+                <p  style="text-align: center;">
+                    <label form="tell">Telefone</label>
+                    <input type="tel" id="tell" style="width: 208px;" />
+                </p>
+            </div>
+            <h3 style="font-size: 30px; text-align: center;">Pesquisa</h3>
+            <div style="display: flex;">
+                <div style="display: flex; justify-content: space-between; flex-direction: column;">
+                    <h4>O que você acha do projeto desenvolve?</h4>
+                    <input type="radio" id="1" name="nota1">
+                    <label for="1">Muito ruim</label>
+                    <input type="radio" id="2" name="nota1">
+                    <label for="2">Ruim</label>
+                    <input type="radio" id="3" name="nota1">
+                    <label for="3">Mediano</label>
+                    <input type="radio" id="4" name="nota1">
+                    <label for="4">Bom</label>
+                    <input type="radio" id="5" name="nota1">
+                    <label for="5">Muito bom</label>
+                </div>
+                <p style="width: 100px;"></p>
+                <div style="display: flex; justify-content: space-between; flex-direction: column;">
+                    <h4>Recomendaria o projeto a um amigo?</h4>
+                    <input type="radio" id="1" name="nota2">
+                    <label for="1">Não</label>
+                    <input type="radio" id="2" name="nota2">
+                    <label for="2">Talvez</label>
+                    <input type="radio" id="3" name="nota2">
+                    <label for="3">Sim</label>
+                </div>
+                <p style="width: 100px;"></p>
+                <div style="display: flex; justify-content: center; flex-direction: column;">
+                    <h4>Qual a sua cidade?</h4>
+                    <select>
+                        <option>Itabira</option>
+                        <option>Ipoema</option>
+                        <option>João Monlevade</option>
+                        <option>Belo Horizonte</option>
+                        <option>Sabará</option>
+                        <option>Senhora do Carmo</option>
+                        <option>Itambé</option>
+                    </select>
+                </div>
+            </div>
+            <p style="height: 100px;"></p>
+            <div>
+                <input type="checkbox" id="termos">
+                <label for="termos">Autoriza compartilhar sua resposta com terceiros?</label>
+                <p style="height: 5px;"></p>
+                <input type="submit" value="Enviar respostas" />
+            </div>
+        </form>
+    </main>
+    <footer style="height: 100px;"></footer>
+</body>
+
+</html>
