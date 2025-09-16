@@ -1,0 +1,173 @@
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    line-height: 1.45;
+    color: #222;
+    background: linear-gradient(180deg, #f7fbff 0%, #e9f2ff 100%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 2rem;
+}
+
+/* Variáveis para fácil customização */
+:root {
+    --accent: #0b7285;
+    /* azul-agua */
+    --muted: #6b7280;
+    --card: #ffffff;
+    --glass: rgba(255, 255, 255, 0.6);
+    --max-width: 1000px;
+    --radius: 12px;
+}
+
+/* Layout centralizado e responsivo */
+.wrapper {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    align-items: start;
+}
+
+header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    background: linear-gradient(90deg, var(--accent), #0f4c75);
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    box-shadow: 0 6px 18px rgba(11, 114, 133, 0.15);
+}
+
+nav a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-left: 0.75rem;
+    font-weight: 600;
+}
+
+main {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), var(--glass));
+    padding: 1.6rem;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 30px rgba(16, 24, 40, 0.06);
+}
+
+h1 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.6rem
+}
+
+h2 {
+    margin-top: 0
+}
+
+p {
+    margin: 0 0 1rem 0;
+    color: #2b2b2b
+}
+
+/* Card / sidebar */
+aside {
+    position: relative;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 6px 16px rgba(11, 72, 88, 0.06);
+    border: 1px solid rgba(11, 114, 133, 0.06);
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: var(--muted)
+}
+
+/* Article content: typografia agradável */
+article p+p {
+    margin-top: 0.6rem
+}
+
+article ul {
+    padding-left: 1.2rem
+}
+
+/* Footer */
+footer {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Pequenas interações apenas com CSS */
+a.button {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a.button:hover {
+    background: var(--accent);
+    color: #fff
+}
+
+/* Imagem de cabeçalho simples */
+.hero {
+    height: 140px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(11, 114, 133, 0.12), rgba(15, 76, 117, 0.06));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    margin-bottom: 1rem;
+}
+
+/* Responsividade */
+@media (max-width:920px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        display: none
+    }
+}
+
+/* Pequeno efeito de destaque nas citações */
+blockquote {
+    margin: 1rem 0;
+    padding: 0.8rem 1rem;
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(180deg, rgba(11, 114, 133, 0.03), transparent);
+}
