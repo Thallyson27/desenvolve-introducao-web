@@ -1,0 +1,222 @@
+/* Reset simples */
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    line-height: 1.45;
+    color: var(--font-color);
+    background: var(--background-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 2rem;
+}
+
+/* Paleta de cores */
+:root {
+    --background-color: #fdfcf7;
+    /* cor de fundo clara e suave */
+    --font-color: #2c2c2c;
+    /* cor da fonte escura para contraste */
+    --accent-color: #b3541e;
+    /* cor de destaque em tom terroso */
+    --muted: #6b7280;
+    --card: #ffffff;
+    --glass: rgba(255, 255, 255, 0.6);
+    --max-width: 1000px;
+    --radius: 12px;
+}
+
+/* Layout centralizado e responsivo */
+.wrapper {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    align-items: start;
+}
+
+header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    box-shadow: 0 6px 18px rgba(179, 84, 30, 0.25);
+}
+
+nav a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-left: 0.75rem;
+    font-weight: 600;
+}
+
+main {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), var(--glass));
+    padding: 1.6rem;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 30px rgba(16, 24, 40, 0.06);
+}
+
+h1 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.6rem;
+    color: var(--accent-color)
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--accent-color)
+}
+
+p {
+    margin: 0 0 1rem 0;
+    color: var(--font-color)
+}
+
+aside {
+    position: relative;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 6px 16px rgba(179, 84, 30, 0.08);
+    border: 1px solid rgba(179, 84, 30, 0.12);
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: var(--muted)
+}
+
+article p+p {
+    margin-top: 0.6rem
+}
+
+article ul {
+    padding-left: 1.2rem
+}
+
+footer {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+a.button {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a.button:hover {
+    background: var(--accent-color);
+    color: #fff
+}
+
+.hero {
+    height: 140px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(179, 84, 30, 0.15), rgba(44, 44, 44, 0.05));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    margin-bottom: 1rem;
+}
+
+@media (max-width:920px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        display: none
+    }
+}
+
+blockquote {
+    margin: 1rem 0;
+    padding: 0.8rem 1rem;
+    border-left: 4px solid var(--accent-color);
+    background: linear-gradient(180deg, rgba(179, 84, 30, 0.05), transparent);
+}
+
+body { max-width: 1200px; margin: 0 auto; }
+body { font-family: sans-serif; }
+p { text-indent: 1em; }
+h1, h2, h3 { text-align: center; }
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.2rem; }
+#summary { text-align: center; }
+#main p { line-height: 1.5; }
+abbr { font-variant: small-caps; }
+
+
+/* ===== PSEUDO-CLASSES & SPECIAL EFFECTS ===== */
+
+/* 1. Links personalizados */
+a {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+a:hover {
+    color: #d97842; /* tonalidade mais clara/escura */
+}
+
+a:visited {
+    font-weight: normal;
+    color: #8c4a1a;
+}
+
+/* 2. Primeira letra do primeiro parágrafo da seção principal */
+main p:first-of-type::first-letter {
+    font-size: 3em;
+    font-family: Georgia, 'Times New Roman', serif;
+    float: left;
+    line-height: 0.9;
+    padding-right: 0.2em;
+}
+
+/* 3. Bordas nos itens do menu de design */
+#design-selection li {
+    border-top: 1px solid #1f295c;
+    padding: 0.5em 0;
+}
+
+#design-selection li:last-child {
+    border-bottom: 1px solid #1f295c;
+}
